@@ -1,9 +1,14 @@
+import React from 'react';
 import '../style/App.css';
 
-import React from 'react';
+import RandomTitle  from "./1.UseState/RandomTitle";
+
 const App = () => {
   return (
-    <h1> Hello World</h1>
+    <div className="container">
+      <RandomTitle/>
+    </div>
+
   );
 }
 export default App;
