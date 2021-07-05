@@ -8,12 +8,13 @@ import '../style/App.css';
 // import WindowSize from './2.UseEffect/WindowSize'
 // import FetchGithubUsers from './2.UseEffect/FetchGithubUsers'
 // import MultipleReturns from './3.ConditionalRendering/MultipleReturns'
-import ShortCircuit from './3.ConditionalRendering/ShortCircuit'
+// import ShortCircuit from './3.ConditionalRendering/ShortCircuit'
+import ShowHide from './3.ConditionalRendering/ShowHide'
 
 const App = () => {
   return (
     <div className="container">
-      <ShortCircuit/>
+      <ShowHide/>
     </div>
   );
 }
