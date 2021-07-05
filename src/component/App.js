@@ -7,12 +7,13 @@ import '../style/App.css';
 // import BasicUseEffect from './2.UseEffect/BasicUseEffect'
 // import WindowSize from './2.UseEffect/WindowSize'
 // import FetchGithubUsers from './2.UseEffect/FetchGithubUsers'
-import MultipleReturns from './3.ConditionalRendering/MultipleReturns'
+// import MultipleReturns from './3.ConditionalRendering/MultipleReturns'
+import ShortCircuit from './3.ConditionalRendering/ShortCircuit'
 
 const App = () => {
   return (
     <div className="container">
-      <MultipleReturns/>
+      <ShortCircuit/>
     </div>
   );
 }
