@@ -1,5 +1,7 @@
-# TO DO app
+# React Fundamentals
+
+Learn the basics of React in this comprehensive course. You will learn about fundamentals, hooks, context API, react router, custom hooks, and more.
 
 ## Credits
 
-All credits goes to this course of FreeCodeCamp: [Learn React JS - Full Course for Beginners - Tutorial 2019](https://www.youtube.com/watch?v=DLX62G4lc44&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=11)
+All credits goes to this course of FreeCodeCamp: [Full React Course 2020 - Learn Fundamentals, Hooks, Context API, React Router, Custom Hooks](https://www.youtube.com/watch?v=4UZrsTqkcW4)
