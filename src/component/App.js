@@ -6,14 +6,14 @@ import '../style/App.css';
 // import Counter from './1.UseState/Counter'
 // import BasicUseEffect from './2.UseEffect/BasicUseEffect'
 // import WindowSize from './2.UseEffect/WindowSize'
-import FetchGithubUsers from './2.UseEffect/FetchGithubUsers'
+// import FetchGithubUsers from './2.UseEffect/FetchGithubUsers'
+import MultipleReturns from './3.ConditionalRendering/MultipleReturns'
 
 const App = () => {
   return (
     <div className="container">
-      <FetchGithubUsers/>
+      <MultipleReturns/>
     </div>
-
   );
 }
 export default App;
