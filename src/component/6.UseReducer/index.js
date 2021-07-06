@@ -1,15 +1,18 @@
 import React,{useState} from 'react'
+import Modal from './Modal'
 
 export default function Index() {
 
     const [name, setName] = useState('')
     const [people, setPeople] = useState([])
+    const [showModal, setShowModal] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault()
         const newPeople = [...people, {id: new Date().getTime().toString(), name}]
         setPeople(newPeople)
         setName('')
+        setShowModal(true)
     }
     
     const removePeople = (id) => {
@@ -17,9 +20,14 @@ export default function Index() {
         setPeople(newPeople)
     }
 
+    const closeModal = () => {
+        setShowModal(false)
+    }
+
     return (
         <> 
-            <h2> Use Reducer</h2>
+            <h2 style={{marginBottom: '2rem'}}> Use Reducer</h2>
+            {showModal && <Modal closeModal={closeModal} modalContent={'Modal'}></Modal>}
             <section>
                 <form className="form" onSubmit={handleSubmit}>
                     <div>
