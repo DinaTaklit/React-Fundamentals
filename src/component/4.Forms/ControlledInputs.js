@@ -11,6 +11,8 @@ export default function ControlledInputs() {
         if (firstName && email){
             const person = {id:new Date().getTime.toString() ,firstName, email}
             setPeople(prevPeople => [...prevPeople, person])
+            setFirstName('')
+            setEmail('')
         }
     }
     return (
