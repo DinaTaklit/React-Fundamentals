@@ -1,6 +1,6 @@
 import React,{useState, useReducer} from 'react'
 import Modal from './Modal'
-
+import {reducer} from './reducer'
 
 const initialState = {
     people: [], 
@@ -12,34 +12,13 @@ export default function Index() {
 
     const [name, setName] = useState('')
 
-    const reducer = (state, action) => {
-        switch (action.type) {
-            case 'ADD_ITEM':
-
-                break;
-            case 'REMOVE_ITEM':
-
-                break;
-            
-            case 'NO_VALUE':
-
-                break;
-            case 'CLOSE_MODAL':
-                break;
-        
-            default:
-                break;
-        }
-        return state
-    }
-
     const [state, dispatch] = useReducer(reducer, initialState)
 
     const handleSubmit = (e) => {
         e.preventDefault()
         if (name) {
-            const newPeople = [...state.people, {id: new Date().getTime().toString(), name}]
-            dispatch({type: 'ADD_ITEM', payload: newPeople})
+            const newPerson = {id: new Date().getTime().toString(), name}
+            dispatch({type: 'ADD_ITEM', payload: newPerson})
             setName('')
         }
         else {
