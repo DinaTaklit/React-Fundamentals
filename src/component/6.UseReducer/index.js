@@ -1,33 +1,60 @@
-import React,{useState} from 'react'
+import React,{useState, useReducer} from 'react'
 import Modal from './Modal'
+
+
+const initialState = {
+    people: [], 
+    showModal: false, 
+    modalContent: ''
+}
 
 export default function Index() {
 
     const [name, setName] = useState('')
-    const [people, setPeople] = useState([])
-    const [showModal, setShowModal] = useState(false)
+
+    const reducer = (state, action) => {
+        switch (action.type) {
+            case 'ADD_ITEM':
+
+                break;
+            case 'REMOVE_ITEM':
+
+                break;
+            
+            case 'NO_VALUE':
+
+                break;
+            case 'CLOSE_MODAL':
+                break;
+        
+            default:
+                break;
+        }
+        return state
+    }
+
+    const [state, dispatch] = useReducer(reducer, initialState)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const newPeople = [...people, {id: new Date().getTime().toString(), name}]
-        setPeople(newPeople)
-        setName('')
-        setShowModal(true)
+        if (name) {
+            const newPeople = [...state.people, {id: new Date().getTime().toString(), name}]
+            dispatch({type: 'ADD_ITEM', payload: newPeople})
+            setName('')
+        }
+        else {
+            dispatch({type:'NO_VALUE'})
+        }
     }
     
-    const removePeople = (id) => {
-        const newPeople = people.filter(person => person.id !== id)
-        setPeople(newPeople)
-    }
-
     const closeModal = () => {
-        setShowModal(false)
+       dispatch({type:'CLOSE_MODAL'}) 
     }
 
     return (
         <> 
             <h2 style={{marginBottom: '2rem'}}> Use Reducer</h2>
-            {showModal && <Modal closeModal={closeModal} modalContent={'Modal'}></Modal>}
+            {state.showModal && <Modal closeModal={closeModal} modalContent={state.modalContent}></Modal>}
             <section>
                 <form className="form" onSubmit={handleSubmit}>
                     <div>
@@ -43,12 +70,12 @@ export default function Index() {
 
             <section>
                 {
-                    people.map(person => {
+                    state.people.map(person => {
                         const {id, name} = person 
                         return (
                             <div className="item" key={id}>
                                 <h3>{name}</h3>
-                                <button onClick={() => removePeople(id)}> Remove</button>
+                                <button onClick={() => dispatch({type:'REMOVE_ITEM', payload:id})}> Remove</button>
                             </div>
                         )
                     })
