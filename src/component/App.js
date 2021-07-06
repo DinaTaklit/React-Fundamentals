@@ -10,12 +10,13 @@ import '../style/App.css';
 // import MultipleReturns from './3.ConditionalRendering/MultipleReturns'
 // import ShortCircuit from './3.ConditionalRendering/ShortCircuit'
 // import ShowHide from './3.ConditionalRendering/ShowHide'
-import ControlledInputs from './4.Forms/ControlledInputs'
+// import ControlledInputs from './4.Forms/ControlledInputs'
+import MultipleInputs from './4.Forms/MultipleInputs'
 
 const App = () => {
   return (
     <div className="container">
-      <ControlledInputs/>
+      <MultipleInputs/>
     </div>
   );
 }
