@@ -13,11 +13,12 @@ import '../style/App.css';
 // import ControlledInputs from './4.Forms/ControlledInputs'
 // import MultipleInputs from './4.Forms/MultipleInputs'
 // import UseRefBasics from './5.UseRef/UseRefBasics'
-import UseReducer from './6.UseReducer'
+// import UseReducer from './6.UseReducer'
+import PropDrilling from './7.PropDrilling/PropDrilling'
 const App = () => {
   return (
     <div className="container">
-      <UseReducer/>
+      <PropDrilling/>
     </div>
   );
 }
