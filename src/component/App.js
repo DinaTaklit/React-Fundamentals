@@ -15,12 +15,15 @@ import '../style/App.css';
 // import UseRefBasics from './5.UseRef/UseRefBasics'
 // import UseReducer from './6.UseReducer'
 // import PropDrilling from './7.PropDrilling/PropDrilling'
-import ContextApi from './8.UseContext/ContextApi'
+// import ContextApi from './8.UseContext/ContextApi'
+import FetchExample from './9.CustomHooks/FetchExample'
+
 const App = () => {
   return (
     <div className="container">
-      <ContextApi/>
+      <FetchExample/>
     </div>
   );
 }
+
 export default App;
