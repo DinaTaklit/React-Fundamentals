@@ -14,11 +14,12 @@ import '../style/App.css';
 // import MultipleInputs from './4.Forms/MultipleInputs'
 // import UseRefBasics from './5.UseRef/UseRefBasics'
 // import UseReducer from './6.UseReducer'
-import PropDrilling from './7.PropDrilling/PropDrilling'
+// import PropDrilling from './7.PropDrilling/PropDrilling'
+import ContextApi from './8.UseContext/ContextApi'
 const App = () => {
   return (
     <div className="container">
-      <PropDrilling/>
+      <ContextApi/>
     </div>
   );
 }
