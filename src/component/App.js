@@ -12,11 +12,12 @@ import '../style/App.css';
 // import ShowHide from './3.ConditionalRendering/ShowHide'
 // import ControlledInputs from './4.Forms/ControlledInputs'
 // import MultipleInputs from './4.Forms/MultipleInputs'
-import UseRefBasics from './5.UseRef/UseRefBasics'
+// import UseRefBasics from './5.UseRef/UseRefBasics'
+import UseReducer from './6.UseReducer'
 const App = () => {
   return (
     <div className="container">
-      <UseRefBasics/>
+      <UseReducer/>
     </div>
   );
 }
