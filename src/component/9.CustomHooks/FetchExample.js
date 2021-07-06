@@ -1,26 +1,16 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
+import {useFetch} from './useFetch'
 
 const url = 'https://course-api.com/javascript-store-products'
 
 export default function FetchExample() {
-    const [loading, setLoading] = useState(true)
-    const [products, setProducts] = useState([])
 
-    const getProducts = async () => {
-        const response = await fetch(url)
-        const products = await response.json()
-        setProducts(products)
-        setLoading(false)
-    }
-
-    useEffect(() => {
-        getProducts()
-    }, [url])
-    console.log(products)
+    const [isLoading, products] = useFetch(url)
 
     return (
         <>
             <h2 style={{marginBottom:'3rem'}}> Custom Hooks</h2>
+            {isLoading && 'Loading ..'}
             <section>
                 {
                     products.map(product => {
