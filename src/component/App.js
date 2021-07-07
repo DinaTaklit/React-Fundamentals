@@ -16,12 +16,13 @@ import '../style/App.css';
 // import UseReducer from './6.UseReducer'
 // import PropDrilling from './7.PropDrilling/PropDrilling'
 // import ContextApi from './8.UseContext/ContextApi'
-import FetchExample from './9.CustomHooks/FetchExample'
+// import FetchExample from './9.CustomHooks/FetchExample'
+import PrropTypes from './10.PropTypes'
 
 const App = () => {
   return (
     <div className="container">
-      <FetchExample/>
+      <PrropTypes/>
     </div>
   );
 }
