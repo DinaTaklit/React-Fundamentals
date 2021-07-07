@@ -18,12 +18,13 @@ import '../style/App.css';
 // import ContextApi from './8.UseContext/ContextApi'
 // import FetchExample from './9.CustomHooks/FetchExample'
 // import PrropTypes from './10.PropTypes'
-import ReactRouter from './11.ReactRouter'
+// import ReactRouter from './11.ReactRouter'
+import Optimisation from './12.MemoUseMemoUseCallback'
 
 const App = () => {
   return (
     <div className="container">
-      <ReactRouter/>
+      <Optimisation/>
     </div>
   );
 }
