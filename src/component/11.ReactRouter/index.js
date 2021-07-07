@@ -15,6 +15,7 @@ export default function ReactRouterSetup() {
     return (
         <Router>
             <h2 style={{marginBottom:"3rem"}}> React Router </h2>
+            <Navbar/>
             <Switch>
                 <Route exact path="/">
                     <Home/>
