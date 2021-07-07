@@ -10,6 +10,12 @@ const Index = () => {
     const [count, setCount] = useState(0)
     const [cart, setCart] = useState(0)
 
+    // useCallback is used for functions
+    // useCallback to prevent addTocart from being created every time the app rerender
+    // bcz of counter after each click
+    // with useCallback  addToCart will run the function only if the cart chage
+
+
     const addToCart = useCallback(() => {
         setCart(cart +1 )
     }, [cart])
@@ -27,6 +33,10 @@ const Index = () => {
             }, 0) / 100
         )
     }
+
+    // Use useMemo is used for values
+    // use useMemo to prevent calculateMostExpensive from runing every time the app rerender
+    // with useMemo calculateMostExpensive will only run if the products list change
 
     const mostExpensive = useMemo(() => calculateMostExpensive(products), [products])
     
@@ -47,6 +57,11 @@ const Index = () => {
         </>
   )
 }
+
+// React.memo is used for a component
+// React.memp will prevent BigList and its childs from rerendering every time 
+// the app rerender bcz of the increase counter button click 
+// With React.memo BigList will render only its own prop, state changes and not bcz the parent rerender
 
 const BigList = React.memo(({ products, addToCart }) => {
     useEffect(() => {
