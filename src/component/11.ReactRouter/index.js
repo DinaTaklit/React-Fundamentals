@@ -26,6 +26,8 @@ export default function ReactRouterSetup() {
                 <Route path="/people">
                     <People/>
                 </Route>
+                <Route path='/persons/:id' children={<Person/>}>
+                </Route>
                 <Route path="*">
                     <Error/>
                 </Route>
