@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // pages
 import Home from './Home';
@@ -15,18 +15,20 @@ export default function ReactRouterSetup() {
     return (
         <Router>
             <h2 style={{marginBottom:"3rem"}}> React Router </h2>
-            <Route exact path="/">
-                <Home/>
-            </Route>
-            <Route path="/about">
-                <About/>
-            </Route>
-            <Route path="/people">
-                <People/>
-            </Route>
-            <Route path="*">
-                <Error/>
-            </Route>
+            <Switch>
+                <Route exact path="/">
+                    <Home/>
+                </Route>
+                <Route path="/about">
+                    <About/>
+                </Route>
+                <Route path="/people">
+                    <People/>
+                </Route>
+                <Route path="*">
+                    <Error/>
+                </Route>
+            </Switch>
         </Router>
     )
 }
