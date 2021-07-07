@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { data } from '../../../data';
+import { data } from '../../data';
 const People = () => {
     const [people, setPeople] = useState(data);
     return (
