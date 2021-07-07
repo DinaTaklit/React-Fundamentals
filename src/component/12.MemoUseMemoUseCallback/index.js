@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import { useFetch } from '../9.CustomHooks/useFetch'
 
 const url = 'https://course-api.com/javascript-store-products'
@@ -14,6 +14,23 @@ const Index = () => {
         setCart(cart +1 )
     }, [cart])
 
+    // every time props or state changes, component re-renders
+    const calculateMostExpensive = (data) => {
+        console.log('calculateMostExpensive')
+        return (
+            data.reduce((total, item) => {
+                const price = item.fields.price
+                if (price >= total) {
+                total = price
+                }
+                return total
+            }, 0) / 100
+        )
+    }
+
+    const mostExpensive = useMemo(() => calculateMostExpensive(products), [products])
+    
+    
     return (
         <>
             <h1>Count : {count}</h1>
@@ -21,6 +38,8 @@ const Index = () => {
                 click me
             </button>
             <div>
+                <h3 style={{ marginTop: '3rem' }}>cart : {cart}</h3>
+                <h3>Most Expensive : ${mostExpensive }</h3>
                 {isLoadig && 'Loading ...'}
             </div>
 
