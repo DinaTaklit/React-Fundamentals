@@ -17,12 +17,13 @@ import '../style/App.css';
 // import PropDrilling from './7.PropDrilling/PropDrilling'
 // import ContextApi from './8.UseContext/ContextApi'
 // import FetchExample from './9.CustomHooks/FetchExample'
-import PrropTypes from './10.PropTypes'
+// import PrropTypes from './10.PropTypes'
+import ReactRouter from './11.ReactRouter'
 
 const App = () => {
   return (
     <div className="container">
-      <PrropTypes/>
+      <ReactRouter/>
     </div>
   );
 }
