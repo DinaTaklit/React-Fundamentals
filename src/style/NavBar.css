@@ -1,0 +1,121 @@
+/* breakpoint in pixels for responsive */
+/* dropdown Menu core scss */
+.appNav ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+}
+.appNav ul li {
+  position: relative;
+  display: inline-block;
+}
+.appNav ul li:hover > ul {
+  display: inherit;
+}
+.appNav ul li:hover > ul li {
+  display: list-item;
+}
+.appNav ul li a {
+  display: block;
+}
+.appNav ul li ul {
+  display: none;
+  position: absolute;
+ /* optional: submenu is same width than parent entry width */
+  min-width: 100%;
+ /* optional: submenu background color */
+  background-color: #aaa;
+}
+.appNav ul li ul ul {
+  left: 100%;
+  top: 0;
+}
+/* Responsiveness core scss */
+@media (max-width: 980px) {
+  .appNav ul {
+    display: inherit;
+ }
+  .appNav ul:first-child:before {
+    background-color: #222;
+    content: 'MENU';
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-align: right;
+ }
+  .appNav ul:active li,.appNav ul:focus li,.appNav ul:hover li {
+    display: list-item;
+ }
+  .appNav ul li {
+    display: none;
+    background-color: #aaa;
+ }
+  .appNav ul li ul {
+    position: relative;
+    min-width: auto;
+    display: inherit;
+    border-top: 2px solid #999;
+ }
+  .appNav ul li ul li {
+    display: block;
+ }
+  .appNav ul li ul li a {
+    position: relative;
+ }
+  .appNav ul li ul li a:before {
+    content: '';
+    padding-left: 1.5%;
+ }
+  .appNav ul li ul li ul {
+    left: 0;
+ }
+}
+/* ------------- optional styling below ------------ */
+/* Following declarations are OPTIONAL */
+
+.appNav  {
+  background-color: #333;
+  margin-bottom: 50px;
+}
+.appNav  ul li:hover {
+  background-color: #888;
+}
+.appNav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+}
+.appNav a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.appNav li > a:after {
+  content: ' +';
+  float: right;
+  margin-left: 5px;
+}
+.appNav li > a:only-child:after {
+  content: '';
+}
+.appNav div {
+  font-size: 2rem;
+}
+.appNav div h1 {
+  border-left: 7.5px solid #bbb;
+  font-size: 2rem;
+  padding-left: 15px;
+  display: inline-block;
+  font-weight: 100;
+}
+.appNav div div {
+  font-size: 1rem;
+  padding-left: 22.5px;
+  font-style: italic;
+  color: #666;
+}
+.appNav div div a {
+  color: #333;
+  padding: 0;
+  text-decoration: underline;
+}
